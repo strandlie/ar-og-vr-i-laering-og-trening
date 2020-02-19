@@ -454,11 +454,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5793202117831451130}
-  m_LocalRotation: {x: -0, y: -0, z: -0.41783217, w: 0.9085242}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3535413, w: 0.93541896}
   m_LocalPosition: {x: 2.058, y: 1.614, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4208139743930248225}
+  - {fileID: 3355013811953742308}
   m_Father: {fileID: 5793202118047354850}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -49.396004}
@@ -478,7 +479,7 @@ MonoBehaviour:
     type: 3}
   initial_velocity: {x: 0, y: 15, z: 0}
   frequency: 100
-  stdev_rotation: {x: 10, y: 0, z: 10}
+  stdev_rotation: {x: 8, y: 0, z: 8}
   stdev_period: 0
 --- !u!1 &5793202118047354852
 GameObject:
@@ -491,7 +492,7 @@ GameObject:
   - component: {fileID: 5793202118047354850}
   - component: {fileID: 5793202118047354851}
   m_Layer: 0
-  m_Name: Brannhydrant
+  m_Name: Pulverapperat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,7 +528,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor1: {fileID: 5793202116823283854}
-  anchor2: {fileID: 5793202117831451130}
+  anchor2: {fileID: 6727136195428534292}
+  hose_prefab: {fileID: 2010466009135231331, guid: 33513d2b5c3101911b76c70ff21f5dfc,
+    type: 3}
+  hose_rotation: {x: 0, y: 0, z: 0}
+--- !u!1 &6727136195428534292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3355013811953742308}
+  m_Layer: 0
+  m_Name: hose_anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3355013811953742308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727136195428534292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5793202117831451129}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7376811182757316616
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376811182757316616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 5793202117831451129}

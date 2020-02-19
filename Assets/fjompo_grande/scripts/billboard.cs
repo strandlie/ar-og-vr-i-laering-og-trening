@@ -22,7 +22,7 @@ public class billboard : MonoBehaviour
     {
         this.transform.rotation 
             = Quaternion.LookRotation(Camera.main.transform.position, Vector3.up)
-            * Quaternion.EulerRotation(orientation);
+            * Quaternion.Euler(orientation);
     }
 
 }
