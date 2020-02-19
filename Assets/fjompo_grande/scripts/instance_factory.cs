@@ -14,18 +14,25 @@ public class instance_factory : MonoBehaviour
     float time_for_next_instance;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         time_for_next_instance = Time.time;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         while (Time.time > time_for_next_instance) {
             time_for_next_instance += 1f/frequency + stdev_period*gaussian();
             make_instance();
         }
+    }
+
+    void OnDisable() {
+        // ( ͡° ͜ʖ ͡°)
+    }
+
+    void OnEnable() {
+        // let's not force the script to "catch up"
+        time_for_next_instance = Time.time;
     }
 
     private
