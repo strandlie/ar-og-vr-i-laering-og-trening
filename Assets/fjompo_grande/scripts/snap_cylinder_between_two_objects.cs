@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class brannhydrant_hose_snap : MonoBehaviour {
+public class snap_cylinder_between_two_objects : MonoBehaviour {
     public GameObject anchor1;
     public GameObject anchor2;
 
