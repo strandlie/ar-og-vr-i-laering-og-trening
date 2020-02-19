@@ -1,0 +1,67 @@
+/*
+This is a Graphviz graph
+*/
+digraph G {
+	rankdir=RL;
+	node [shape="rectangle", style=filled, fillcolor=white]
+
+	{
+	rank=same;
+	unity_solid          [fillcolor="#ddeedd"]
+	unity_gravity        [fillcolor="#ddeedd"]
+	}
+	{
+	rank=same;
+	steamvr_holdable     [fillcolor="#dddddd"]
+	steamvr_triggerable  [fillcolor="#dddddd"]
+	}
+
+	deathplane           [fillcolor="#ffccff"]
+
+	fire                 [fillcolor="#ffdddd"]
+	fire_core            [fillcolor="#ffdddd"]
+
+	foam                 [fillcolor="#ddddff"]
+	foam_factory         [fillcolor="#ddddff"]
+
+	extinguisher         [fillcolor="#ddffdd"]
+	extinguisher_handle  [fillcolor="#ddffdd"]
+	extinguisher_nose    [fillcolor="#ddffdd"]
+	extinguisher_hose    [fillcolor="#ddffdd"]
+
+
+	edge [label="inherits"]
+	extinguisher_nose -> foam_factory
+	extinguisher_nose -> steamvr_holdable
+	extinguisher_handle -> steamvr_holdable
+	extinguisher_handle -> steamvr_triggerable
+
+	foam              -> unity_gravity
+	extinguisher      -> unity_gravity
+	extinguisher_nose -> unity_gravity
+	/*
+	*/
+	extinguisher      -> unity_solid
+	extinguisher_nose -> unity_solid
+
+	edge [label="attached_to"]
+	extinguisher -> extinguisher_handle
+	extinguisher_hose -> extinguisher
+	extinguisher_hose -> extinguisher_nose
+
+	edge [label="triggers"]
+	extinguisher_handle -> extinguisher_nose
+
+	edge [label="produces"]
+	fire -> fire_core
+	fire_core -> fire
+	foam_factory -> foam
+	/*
+	extinguisher -> extinguisher_hose
+	*/
+
+	edge [label="interacts_with"]
+	foam -> fire_core
+	foam -> deathplane
+
+}
