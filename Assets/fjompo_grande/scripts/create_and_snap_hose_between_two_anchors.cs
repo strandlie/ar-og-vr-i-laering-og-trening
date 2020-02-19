@@ -6,7 +6,6 @@ public class create_and_snap_hose_between_two_anchors : MonoBehaviour {
     public GameObject anchor1;
     public GameObject anchor2;
     public GameObject hose_prefab;
-    public Vector3    hose_rotation = new Vector3(0, 0, 0);
 
     GameObject hose;
 
@@ -15,7 +14,8 @@ public class create_and_snap_hose_between_two_anchors : MonoBehaviour {
         hose = Instantiate(
             hose_prefab,
             Vector3.zero,
-            Quaternion.identity);
+            Quaternion.identity,
+            this.transform);
         update_hose_position();
     }
 
@@ -36,10 +36,11 @@ public class create_and_snap_hose_between_two_anchors : MonoBehaviour {
 
         // rotate according to direction vector
         hose.transform.rotation
-            = Quaternion.LookRotation(direction, Vector3.up)
-            * Quaternion.Euler(hose_rotation);
+            = Quaternion.LookRotation(direction, Vector3.up);
 
         // lenght equal to distance, basemodel is 2 units high
-        hose.transform.localScale = new Vector3(1, direction.magnitude/2, 1);
+        
+        hose.transform.localScale
+            = new Vector3(1, 1, direction.magnitude/2 / (this.transform.localScale.magnitude/1.7320508075688772f));
     }
 }
