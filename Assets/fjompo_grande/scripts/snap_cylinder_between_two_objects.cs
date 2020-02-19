@@ -2,29 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class brannhydrant_hose_snap : MonoBehaviour {
-    Transform head, nose; // empty objects
-    GameObject hose; // i make this
+public class snap_cylinder_between_two_objects : MonoBehaviour {
+    public GameObject anchor1;
+    public GameObject anchor2;
+
+    GameObject hose;
 
     // Start is called before the first frame update
     void Start() {
-        // anchors:
-        foreach (Transform t in this.GetComponentInChildren<Transform>()) {
-            if (t.gameObject.name == "head") head = t;
-            if (t.gameObject.name == "nose") nose = t;
-        }
-
-        // hose object
         hose = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
         hose.name = "_" + this.gameObject.name + "_hose";
     }
 
     // Update is called once per frame
     void Update() {
-        Vector3 direction = head.position - nose.position;
+        Vector3 direction = anchor1.transform.position - anchor2.transform.position;
 
         // origin of cylinder is in center, therefore position is between the two anchors
-        hose.transform.position = (nose.position + head.position) / 2;
+        hose.transform.transform.position = (anchor2.transform.position + anchor1.transform.position) / 2;
 
         // rotate according to direction vector
         hose.transform.rotation
