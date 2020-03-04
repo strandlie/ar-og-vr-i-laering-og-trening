@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class burnable_behaviour : MonoBehaviour
 {
+    public AudioClip fizzle_sound;
+    public float     fizzle_sound_volume = 1.0f;
+
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        fizzle_sound.LoadAudioData();
         //Debug.Log("setup " + this.gameObject.name);    
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         
     }
 
@@ -22,6 +25,8 @@ public class burnable_behaviour : MonoBehaviour
         //Debug.Log("enter " + other.transform.parent.gameObject.name);
         if (other.transform.parent.gameObject.name.StartsWith("foam_particle"))
         {
+            AudioSource.PlayClipAtPoint(
+                fizzle_sound, other.transform.position, fizzle_sound_volume);
             Destroy(other.transform.parent.gameObject);
         }
     }
