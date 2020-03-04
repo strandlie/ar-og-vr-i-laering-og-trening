@@ -39,7 +39,7 @@ public class burnable_behaviour : MonoBehaviour {
         if (fire_current != fire_prev) {
             // toggle fire
             if (fire_current == 0) {
-                fire_asset.GetComponent<FireConstantBaseScript>().Stop();
+                fire_current_asset.GetComponent<FireConstantBaseScript>().Stop();
                 fire_current_asset = null;
             } else if (fire_prev == 0) {
                 fire_current_asset = Instantiate(
@@ -66,13 +66,15 @@ public class burnable_behaviour : MonoBehaviour {
 
     // when hit by foam
     void HandleFoamCollision(GameObject foam) {
-        AudioSource.PlayClipAtPoint(
-            fizzle_sound,
-            foam.transform.position,
-            fizzle_sound_volume
-        );
-        Destroy(foam);
-        if (fire_current > 0) fire_current += foam_effect; // foam_effect is negative
+        if (fire_current > 0) {
+            fire_current += foam_effect; // foam_effect is negative
+            AudioSource.PlayClipAtPoint(
+                fizzle_sound,
+                foam.transform.position,
+                fizzle_sound_volume
+            );
+            Destroy(foam);
+        }
         if (fire_current < 0) fire_current = 0;
     }
 
