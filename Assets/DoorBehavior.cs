@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorBehavior : MonoBehaviour
 {// Smoothly open a door
-    public float smalldoorOpenAngle = 90.0f;
+    public float OpenAngle = 90.0f;
     public float openSpeed = 2.0f;
 
     bool open = false;
@@ -34,7 +34,7 @@ public class DoorBehavior : MonoBehaviour
         transform.localEulerAngles = new Vector3(
             transform.localEulerAngles.x,
             Mathf.LerpAngle(currentRotationAngle, 
-            defaultRotationAngle + (open ? smalldoorOpenAngle : 0), openTime), 
+            defaultRotationAngle + (open ? OpenAngle : 0), openTime), 
             transform.localEulerAngles.z
         );
 
