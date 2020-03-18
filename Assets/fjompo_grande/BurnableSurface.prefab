@@ -156,7 +156,7 @@ MonoBehaviour:
   fire_initial: 5
   fire_max: 5
   foam_effect: -0.2
-  fizzle_sound_volume: 0.2
+  fizzle_sound_volume: 0.5
   fizzle_sound: {fileID: 8300000, guid: 0ed7d39b4e99bd52cb2e037f2f4e4f07, type: 3}
 --- !u!54 &9200751310341763979
 Rigidbody:
