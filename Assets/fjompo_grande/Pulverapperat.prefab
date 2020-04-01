@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5793202116934745954}
   - component: {fileID: 5015096601180390870}
-  - component: {fileID: 3995823805865754257}
+  - component: {fileID: 1581598540028857573}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -146,7 +146,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3995823805865754257
+--- !u!114 &1581598540028857573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,15 +155,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5793202116094986707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 8480550295191001164}
+  m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 5793202116806014470}
+  m_materialColorField: 
 --- !u!1 &5793202116806014472
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +488,7 @@ GameObject:
   - component: {fileID: 5793202117831451129}
   - component: {fileID: 1169616017788730005}
   - component: {fileID: 2371513456468435936}
-  - component: {fileID: 1943112969989478977}
+  - component: {fileID: 4882508514839748063}
   m_Layer: 0
   m_Name: nose
   m_TagString: Untagged
@@ -546,7 +547,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1943112969989478977
+--- !u!114 &4882508514839748063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -555,15 +556,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5793202117831451130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 5037271259152983335}
+  m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 7573421574377370464}
+  m_materialColorField: 
 --- !u!1 &5793202118047354852
 GameObject:
   m_ObjectHideFlags: 0
