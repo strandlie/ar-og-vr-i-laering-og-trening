@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BasicRoom.unity
     guid: acbbe5711ae2a6f4f94af25f7b64f049
+  - enabled: 0
+    path: Assets/fjompo_grande/work_scene.unity
+    guid: 5ce5cdf5f7015e8d499507825372fd32
+  - enabled: 1
+    path: Assets/Scenes/VRLabben.unity
+    guid: 4e5199657e093434b8eb36467f2a36ce
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
+    guid: 24f58b3f0ca02d44eaec7f50bca538f2
   m_configObjects: {}
