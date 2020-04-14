@@ -65,4 +65,12 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Mac specific files
 .DS_Store
+
+# Don't include the Oculus integration or their metafiles
+/Assets/Oculus/*
+/Assets/Oculus.meta
+/Assets/Resources/*
+/Assets/Resources.meta
