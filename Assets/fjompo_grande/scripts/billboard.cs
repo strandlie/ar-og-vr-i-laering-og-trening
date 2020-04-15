@@ -5,11 +5,15 @@ using UnityEngine;
 public class billboard : MonoBehaviour
 {
     public Vector3 orientation = new Vector3(90, 0, 0);
-    
+    private GameObject playerController;
+    private OVRCameraRig ovrCameraRig;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GameObject.FindWithTag("GameController");
         face_camera();
+        
     }
 
     // Update is called once per frame
@@ -20,9 +24,16 @@ public class billboard : MonoBehaviour
 
     void face_camera()
     {
-        this.transform.rotation 
-            = Quaternion.LookRotation(Camera.main.transform.position, Vector3.up)
+        if (playerController != null)
+        {
+            OVRCameraRig ovrCameraRig = playerController.GetComponentInChildren<OVRCameraRig>();
+            Debug.Log("Center position: " + ovrCameraRig.centerEyeAnchor.position);
+
+            this.transform.rotation
+            = Quaternion.LookRotation(ovrCameraRig.centerEyeAnchor.position, Vector3.up)
             * Quaternion.Euler(orientation);
+        }
+        
     }
 
 }
