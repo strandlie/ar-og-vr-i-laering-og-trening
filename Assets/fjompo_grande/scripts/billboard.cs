@@ -27,11 +27,10 @@ public class billboard : MonoBehaviour
         if (playerController != null)
         {
             OVRCameraRig ovrCameraRig = playerController.GetComponentInChildren<OVRCameraRig>();
-            Debug.Log("Center position: " + ovrCameraRig.centerEyeAnchor.position);
-
+            Vector3 dir = ovrCameraRig.centerEyeAnchor.position - this.transform.position;
             this.transform.rotation
-            = Quaternion.LookRotation(ovrCameraRig.centerEyeAnchor.position, Vector3.up)
-            * Quaternion.Euler(orientation);
+                = Quaternion.LookRotation(dir, Vector3.up)
+                * Quaternion.Euler(orientation);
         }
         
     }
