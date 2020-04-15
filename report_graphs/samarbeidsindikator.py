@@ -17,11 +17,11 @@ plt.text( 2.3, -0.3, "Forpliktet\nog tillitsfull")
 plt.text(-1.5, -4.5,   "Effektiv og strukturert")
 
 #plt.plot([],[]) # to offset the colors
+#plt.plot([],[]) # to offset the colors
 for label, vals in [
     ("Første",        (4.5, 3.1, 4.5,  3.6)),
-    #("Andre, ønsket", (4.8, 5,   4.55, 2.9)),
     ("Andre",         (4.8, 4,   4.55, 2.9)),
-    #("Tredje",        (1,   2,   3,    4)),
+    ("Tredje",        (5,   4.5, 4.9,  4.2)),
 ]:
     vals = list(vals) + [vals[0]]
     cx = list(map(mul, x, vals))
