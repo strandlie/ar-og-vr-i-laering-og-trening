@@ -19,7 +19,7 @@ public class GrabbableDetachesFromParent : OVRGrabbable
         if (enableOnDetach4 != null) enableOnDetach4.enabled = false;
         if (enableOnDetach5 != null) enableOnDetach5.enabled = false;
 
-        base.Start()
+        base.Start();
     }
 
 	public override
