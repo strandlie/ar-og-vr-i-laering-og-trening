@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class GrabbableDetachesFromParent : OVRGrabbable
 {
     public MonoBehaviour enableOnDetach1 = null;
@@ -10,6 +11,7 @@ public class GrabbableDetachesFromParent : OVRGrabbable
     public MonoBehaviour enableOnDetach4 = null;
     public MonoBehaviour enableOnDetach5 = null;
 
+    private Rigidbody physics;
 
     protected override void Start()
     {
@@ -19,6 +21,9 @@ public class GrabbableDetachesFromParent : OVRGrabbable
         if (enableOnDetach4 != null) enableOnDetach4.enabled = false;
         if (enableOnDetach5 != null) enableOnDetach5.enabled = false;
 
+        this.physics = GetComponent<Rigidbody>();
+        this.physics.isKinematic = true;
+
         base.Start();
     }
 
@@ -26,6 +31,7 @@ public class GrabbableDetachesFromParent : OVRGrabbable
     void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         this.transform.parent = null;
+        this.physics.isKinematic = false;
 
         if (enableOnDetach1 != null) enableOnDetach1.enabled = true;
         if (enableOnDetach2 != null) enableOnDetach2.enabled = true;

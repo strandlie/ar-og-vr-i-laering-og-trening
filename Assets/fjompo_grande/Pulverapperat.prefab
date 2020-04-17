@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6235500937292020873}
   - component: {fileID: 2491276621219845707}
   - component: {fileID: 3354648536264510026}
+  - component: {fileID: 3649225378865261315}
   m_Layer: 0
   m_Name: safety_tab
   m_TagString: Untagged
@@ -150,6 +151,22 @@ MonoBehaviour:
   enableOnDetach3: {fileID: 0}
   enableOnDetach4: {fileID: 0}
   enableOnDetach5: {fileID: 0}
+--- !u!54 &3649225378865261315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416357743887130919}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5755722542034177876
 GameObject:
   m_ObjectHideFlags: 0
