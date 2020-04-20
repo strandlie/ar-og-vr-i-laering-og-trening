@@ -32,7 +32,7 @@ public class GrabbableDetachesFromParent : OVRGrabbable
     }
 
     private
-	void detach()
+    void detach()
     {
         this.transform.parent = null;
         this.physics.isKinematic = false; // also handled by OVRGrabbable
