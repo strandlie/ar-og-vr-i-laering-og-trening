@@ -13,7 +13,8 @@ public class GrabbableDetachesFromParent : OVRGrabbable
 
     private Rigidbody physics;
 
-    protected override void Start()
+    protected override
+    void Start()
     {
         if (enableOnDetach1 != null) enableOnDetach1.enabled = false;
         if (enableOnDetach2 != null) enableOnDetach2.enabled = false;
@@ -22,23 +23,31 @@ public class GrabbableDetachesFromParent : OVRGrabbable
         if (enableOnDetach5 != null) enableOnDetach5.enabled = false;
 
         this.physics = GetComponent<Rigidbody>();
+
+        this.physics.isKinematic = false;
+        base.Start(); // race conditions.... why must it check for this on init for instead on grab
         this.physics.isKinematic = true;
 
-        base.Start();
+        //Invoke("detach", 3.0f); // for testing
     }
 
-	public override
-    void GrabBegin(OVRGrabber hand, Collider grabPoint)
+    private
+	void detach()
     {
         this.transform.parent = null;
-        this.physics.isKinematic = false;
+        this.physics.isKinematic = false; // also handled by OVRGrabbable
 
         if (enableOnDetach1 != null) enableOnDetach1.enabled = true;
         if (enableOnDetach2 != null) enableOnDetach2.enabled = true;
         if (enableOnDetach3 != null) enableOnDetach3.enabled = true;
         if (enableOnDetach4 != null) enableOnDetach4.enabled = true;
         if (enableOnDetach5 != null) enableOnDetach5.enabled = true;
+    }
 
+    public override
+    void GrabBegin(OVRGrabber hand, Collider grabPoint)
+    {
+        this.detach();
         base.GrabBegin(hand, grabPoint);
     }
 }
