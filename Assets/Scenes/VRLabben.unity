@@ -1924,42 +1924,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 487527793}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &508491852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5793202117831451130, guid: 4e5ab088b07b0e04e9727559915fe154,
-    type: 3}
-  m_PrefabInstance: {fileID: 2102431778}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &508491854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508491852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!135 &508491857
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508491852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.13
-  m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!1001 &534781087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4028,42 +3992,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b21410e82326c41829a7cd5ef7ffae, type: 3}
---- !u!1 &1005608112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5793202116094986707, guid: 4e5ab088b07b0e04e9727559915fe154,
-    type: 3}
-  m_PrefabInstance: {fileID: 2102431778}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1005608114
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005608112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: -0.2, y: 1, z: 0}
---- !u!114 &1005608116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005608112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1001 &1010873680
 PrefabInstance:
   m_ObjectHideFlags: 0
