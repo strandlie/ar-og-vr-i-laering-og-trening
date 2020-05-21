@@ -1,37 +1,36 @@
-# Brann i blokka
+# Fire in the lab
 
-Dette er VR applikasjonen til gruppe 5 i EiT landsbyen VR/AR i læring og trening 2020.
+This is the VR application of group 5 in the _Eksperter i Team_ village *VR/AR i læring og trening 2020*
 
-Denne applikasjonen skal lære brukeren å bruke et brannslukningsapparat i en brannsituasjon inne på VR-labben.
+The purpose of this application is to teach the user how to use a fire extinguisher in a hazardous situation in the VR lab.
 
-For å kunne kjøre prosjektet må du laste ned og installere `Oculus Integration` fra Unity Asset Store.
+To be able to run this project you need to download and install `Oculus Integration` from the Unity Asset Store.
 
-Scenen ligger i `Assets/Scenes/VRLabben.unity`
+The Scene can be found in `Assets/Scenes/VRLabben.unity`
 
-Brannslukkningsapparatet kan løftes med
-`HandTrigger` knappen, og avfyres med `IndexTrigger` knappen,
-som illustrert [her](https://developer.oculus.com/documentation/unity/unity-ovrinput/#virtual-mapping-accessed-as-individual-controllers)
-Før apparatet kan brukes må sikkerhetssplinten (den oransje sylynderen) trekkes ut.
+The fire extinguisher can be lifted with the `HandTrigger` button, and can be engaged with the `IndexTrigger` button,
+as illustrated [here](https://developer.oculus.com/documentation/unity/unity-ovrinput/#virtual-mapping-accessed-as-individual-controllers).
+Before the extinguisher can be engaged the safety pin (orange sylinder) must be removed.
 
-# Utdrag fra prosjektrapporten:
+# Excerpts from the project report:
 
-## Applikasjonens innhold
+## Contents of the application
 
-Applikasjonen består av en scene som inneholder:
+The application consists of a scene that contains:
 
-* Et virtuelt miljø som ligner VR-labben
-* Et brannslukningsapparat som kan interageres med
-* Noen flammer som bør slukkes
+* A virtual environment similar to the VR lab.
+* A fire extinguisher that can be interacted with
+* Some fires that should be extinguished
 
 
-## Funksjonalitet
+## Functionality
 
-* Kroppen og nesen til brannslukningsapparatet kan plukkes opp av VR aktøren hver for seg med hver sin hånd
-* Kroppen har en sikkerhetsplint (en oransje sylynder) som begrenser slukkefunksjonaliteten til brannslukningsapparatet.
-* Brannslukningsapparatet kan produsere pulverpartikler som sprøytes ut av nesen. Denne funksjonaliteten kan aktiveres av at brukeren Når splinten er trukket, og brukeren holder kroppen til apparatet og trykker på pekefingerknappen.
-* Hver brann holder styr på sin egen styrke, og vil vokse med tid op til en øvre grense satt av utvikleren. Den visuelle størrelsen på brannen er bestem av denne styrkeverdien.
-* Hver brann har en liten kjerne, som pulverpartikler kan iteragere med.
-* Pulverpartikler som treffer kjernen til en brann vil trekke ned styrken til brannen med en hvis mengde, for så å selv forsvinne.
-* Når styrken til en brann når 0 vil brannen forsvinne.
-* Dører kan åpnes og lukkes med F tasten på tastaturet
+* The body and nose of the fire extinguisher can be picked up by the VR actor separately in each hand respectively
+* The body has a safetypin (orange sylinder) that limits extinguishing functionality of the fire extinguisher.
+* The fire extinguisher can produce powder particles that are sprayed through the nose. This functionality can be activated by the user when the safety pin is removed, and the user is carrying the body of the extinguisher and presses the index finger button.
+* Each fire keeps track of its own intensity, and will grow with time up to an upper boundary set by the developer. The visual size of the fire is determined by this intensity value. 
+* Each fire has a small core that powder particles can interact with.
+* Powder particles hitting the core of a fire will decrease the intensity of the fire with a certain amount, and then disappear.
+* When the intensity of a fire reaches 0 the fire will disappear.
+* Doors can be opened using the F key on the keyboard. This is only possible with the Oculus Quest connected using Oculus Link, or using other headsets running the application from a computer.
 
